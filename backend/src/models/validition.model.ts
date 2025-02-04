@@ -20,7 +20,3 @@ export const loginValidator = Joi.object({
     .min(8)
     .required(),
 });
-
-export const taskValidator = Joi.object({
-  title: Joi.string().min(3).max(30).required(),
-});

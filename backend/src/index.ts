@@ -4,12 +4,14 @@ import cors from "cors";
 
 import { connectDb } from "./config/db";
 import userRouter from "./routes/user.route";
+import taskRouter from "./routes/task.route";
 
 const server = express();
 
 server.use(express.json());
 server.use(cors());
 server.use("/api/user", userRouter);
+server.use("/api/task", taskRouter);
 
 server.get("/", (req, res) => {
   res.json({ message: "server is running", success: true });
