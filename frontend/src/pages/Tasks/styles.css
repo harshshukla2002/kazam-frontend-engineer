@@ -1,0 +1,45 @@
+.main-container {
+  width: 80%;
+  margin: auto;
+  margin-top: 5%;
+}
+
+.main-container h3 {
+  font-size: 25px;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-container button {
+  border: 2.5px solid black;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.header-container button:hover {
+  background-color: black;
+  color: white;
+}
+
+button:disabled {
+  opacity: 0.5;
+}
+
+.logout-button {
+  border: 2.5px solid red !important;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.logout-button:hover {
+  background-color: red !important;
+  color: white;
+}

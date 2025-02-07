@@ -1,0 +1,25 @@
+.card-container {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 10px;
+  margin-top: 3%;
+  border-radius: 5px;
+}
+
+.card-container h3 {
+  text-align: center;
+  margin-top: 3%;
+}
+
+.header-task {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.task-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-block: 10px;
+}
