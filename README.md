@@ -38,6 +38,8 @@ https://github.com/user-attachments/assets/ca71716e-280d-454a-82f3-d7887b63bff7
 
 ## Video Walkthrough of the Codebase
 
+https://github.com/user-attachments/assets/58993d6f-c423-4aef-8edc-5376f1bd9d49
+
 
 
 ## Features
