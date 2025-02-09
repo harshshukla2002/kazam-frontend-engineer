@@ -1,59 +1,78 @@
 # Task Management Application
 
-## Description
+## Introduction
 
-This is a **full-stack task management application** built with **TypeScript**, featuring **user authentication, task management, real-time updates, and search functionality**. It allows users to create, update, delete, and filter tasks efficiently.
+The **Task Management Application** is a full-stack web application that allows users to manage their tasks efficiently. Users can create, edit, delete, and track tasks. The application supports authentication and provides a seamless user experience.
 
-## Deploymennt URLs
+## Project Type
 
-- Frontend - [Frontend](https://kazam-assignment.netlify.app/)
-- Backend - [Backend](https://kazam-backend-li3i.onrender.com/)
+Fullstack
 
-## Tech Stack
+## Deployed App
 
-### **Frontend:**
+- **Frontend:** [Frontend Deployment Link](https://kazam-assignment.netlify.app/)
+- **Backend:** [Backend Deployment Link](https://kazam-backend-li3i.onrender.com/)
 
-- React
-- TypeScript
-- Tailwind CSS
-- React Router
-- Redux Toolkit
+## Directory Structure
 
-### **Backend:**
+```
+my-app/
+├─ backend/src/
+│  ├─ controllers/
+│  ├─ models/
+│  ├─ routes/
+│  ├─ config/
+│  ├─ server.js
+├─ frontend/
+│  ├─ src/
+│  │  ├─ components/
+│  │  ├─ pages/
+│  │  ├─ App.tsx
+│  │  ├─ index.tsx
+```
 
-- Node.js
-- Express.js
-- TypeScript
-- JWT Authentication
-- bcrypt (for password hashing)
-- Joi (for validation)
+## Video Walkthrough of the Project
 
-### **Database:**
+[Project Walkthrough Video](https://video-link.com)
 
-- MongoDB (Mongoose for schema management)
+## Video Walkthrough of the Codebase
+
+[Codebase Walkthrough Video](https://video-link.com)
 
 ## Features
 
-- **User Authentication:** Register/Login users with JWT authentication.
-- **Task Management:** CRUD operations for tasks.
-- **Search & Filtering:** Search tasks by title.
-- **Real-time Updates:** Dynamic UI updates.
-- **Responsive Design:** Works across all devices.
+- User Authentication (Signup/Login)
+- Task Creation, Editing, and Deletion
+- Task Filtering and Searching
+- Task Completion Status Tracking
+- Responsive UI with Tailwind CSS
+- Secure API with JWT Authentication
 
-## Installation & Setup
+## Design Decisions or Assumptions
 
-### **1. Clone the Repository**
+- Tasks are user-specific and require authentication.
+- MongoDB is used as the primary database.
+- JWT is used for secure authentication.
+- Redux is used for state management.
+- Tailwind CSS is used for styling.
+
+## Installation & Getting Started
+
+Clone the repository and install dependencies:
 
 ```bash
+# Clone the repository
 git clone https://github.com/harshshukla2002/kazam-frontend-engineer.git
-cd kazam-frontend-engineer
-```
 
-### **2. Backend Setup**
-
-```bash
+# Backend Setup
 cd backend
 npm install
+npm start
+
+# Frontend Setup
+cd frontend
+npm install --force
+npm start
 ```
 
 #### **Environment Variables (.env)**
@@ -66,63 +85,54 @@ MONGO_URI=mongodb+srv://harshshukla:harsh12@cluster0.ob6lhlw.mongodb.net/kazam-a
 JWT_SECRET=kazam-assignment
 ```
 
-#### **Run Backend Server**
+Create a `.env` file in the `frontend` folder and add:
 
-```bash
-npm run server
+```env
+REACT_APP_API_URL = https://kazam-backend-li3i.onrender.com
 ```
 
-### **3. Frontend Setup**
+## Usage
+
+Once the application is running, navigate to the frontend URL and sign up or log in to start managing tasks.
 
 ```bash
-cd ../frontend
-npm install --force
+# Example: Create a Task
+POST /api/tasks
+Headers: { "Authorization": "Bearer token" }
+Body: { "title": "New Task", "description": "Task details" }
 ```
 
-#### **Start Frontend Server**
+## Credentials
+
+Use the following credentials for testing:
 
 ```bash
-npm start
+Email: test@example.com
+Password: password123
 ```
+
+## APIs Used
+
+- **Backend API**: Custom-built REST API
+- **External APIs**: None
 
 ## API Endpoints
 
-### **Auth Routes**
+### Authentication
 
-| Method | Endpoint             | Description         |
-| ------ | -------------------- | ------------------- |
-| POST   | `/api/auth/register` | Register a new user |
-| POST   | `/api/auth/login`    | User login          |
+- **POST /api/user/register** - Register a new user
+- **POST /api/user/login** - Authenticate user
 
-### **Task Routes**
+### Tasks
 
-| Method | Endpoint                | Description       |
-| ------ | ----------------------- | ----------------- |
-| GET    | `/api/tasks/`           | Get all tasks     |
-| POST   | `/api/tasks/create`     | Create a new task |
-| PUT    | `/api/tasks/update/:id` | Update a task     |
-| DELETE | `/api/tasks/delete/:id` | Delete a task     |
+- **GET /api/tasks/** - Get all tasks for the logged-in user
+- **POST /api/tasks/create** - Create a new task
+- **PUT /api/tasks/update/:id** - Update a task
+- **DELETE /api/tasks/delete/:id** - Delete a task
 
-## API Testing with Postman
+## Technology Stack
 
-1. Install [Postman](https://www.postman.com/)..
-2. Use the following JSON format for testing authentication:
-
-```json
-{
-  "name": "John Doe",
-  "email": "johndoe@example.com",
-  "password": "password123"
-}
-```
-
-1. For creating a task:
-
-```json
-{
-  "title": "Learn Redux",
-  "description": "Understand state management",
-  "isCompleted": false,
-  "userId": "67a45e4245b1d1cc88513100"
-}
-```
+- **Frontend:** React, TypeScript, ChakraUI, Redux
+- **Backend:** Node.js, Express.js, MongoDB, JWT Authentication
+- **Database:** MongoDB
+- **State Management:** Redux
