@@ -33,11 +33,12 @@ my-app/
 
 ## Video Walkthrough of the Project
 
-[Project Walkthrough Video](https://video-link.com)
+https://github.com/user-attachments/assets/ca71716e-280d-454a-82f3-d7887b63bff7
+
 
 ## Video Walkthrough of the Codebase
 
-[Codebase Walkthrough Video](https://video-link.com)
+
 
 ## Features
 
